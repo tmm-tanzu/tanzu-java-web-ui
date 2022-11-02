@@ -22,3 +22,5 @@ k8s_custom_deploy(
 
 k8s_resource('server-side-ui-starter', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': 'server-side-ui-starter'}])
+
+allow_k8s_contexts('tap-demo-dev')
